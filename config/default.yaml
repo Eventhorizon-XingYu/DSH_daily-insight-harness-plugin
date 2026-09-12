@@ -1,0 +1,23 @@
+schedule:
+  time: "08:00"
+  timezone: "Asia/Shanghai"
+topics:
+  - "AI Agent"
+  - "大模型"
+  - "开源硬件"
+search:
+  engine: "duckduckgo"
+  max_results_per_keyword: 5
+  max_keywords: 3
+video:
+  platforms: ["youtube", "bilibili"]
+  max_videos: 3
+llm:
+  provider: "deepseek"
+  base_url: "https://www.boxying.com/v1"
+  model: "gpt-5.4"
+  temperature: 0.7
+  max_tokens: 4096
+output:
+  dir: "./output"
+  naming: "{date}_{topic_slug}.md"

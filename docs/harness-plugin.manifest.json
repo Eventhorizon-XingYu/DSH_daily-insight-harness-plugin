@@ -1,0 +1,25 @@
+{
+  "schema": "dsh.plugin.ui/v1",
+  "status": "proposed",
+  "id": "daily-insight",
+  "displayName": "Daily Insight",
+  "description": "Collect sources and generate a cited daily intelligence article.",
+  "entrypoint": "daily-insight",
+  "capabilities": ["config", "run", "daemon", "output.read"],
+  "commands": {
+    "init": ["init", "--path", "{configPath}"],
+    "run": ["run", "--config", "{configPath}"],
+    "daemon": ["daemon", "--config", "{configPath}"]
+  },
+  "secrets": [
+    {"name": "DEEPSEEK_API_KEY", "scope": "process", "rendererVisible": false},
+    {"name": "SERPAPI_KEY", "scope": "process", "rendererVisible": false, "optional": true},
+    {"name": "TAVILY_KEY", "scope": "process", "rendererVisible": false, "optional": true}
+  ],
+  "ui": {
+    "configSchema": "harness/daily-insight.config.schema.json",
+    "runOutput": "stdout",
+    "streaming": false,
+    "backgroundExecution": true
+  }
+}

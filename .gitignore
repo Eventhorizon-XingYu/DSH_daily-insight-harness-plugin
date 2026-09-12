@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+output/*.md
+dist/
+*.egg-info/
+.venv/
+.pytest_cache/
+*.tgz
+config/local.yaml

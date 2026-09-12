@@ -1,0 +1,4 @@
+# dsh bundle patch: inserts Daily Insight into the active profile.
+- insert:
+    - id: daily-insight
+      name: 'daily-insight-harness-plugin'
